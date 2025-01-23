@@ -1,2 +1,2 @@
-import"./assets/modulepreload-polyfill-B5Qt9EMX.js";import"./assets/styles-l0sNRNKZ.js";console.log("hi");
+import"./assets/modulepreload-polyfill-B5Qt9EMX.js";import{S as t}from"./assets/vendor-B-WyX8ve.js";const r=(o,a)=>{try{localStorage.setItem(o,JSON.stringify(a))}catch(e){console.log(e)}},s=o=>{try{const a=localStorage.getItem(o);return a===null?void 0:JSON.parse(a)}catch(a){console.log(a)}};new t(".js-gallery a",{captionsData:"alt",captionDelay:250});const l={name:"Sviatoslav",email:"godyk92@yahoo.com",message:"my message"},c=()=>{console.log(s("feedback-form-data"))};c();r("feedback-form-data",l);
 //# sourceMappingURL=1-gallery.js.map
