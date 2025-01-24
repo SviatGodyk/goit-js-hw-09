@@ -14,6 +14,10 @@ const fillFormFields = () => {
       localStorage.getItem('feedback-form-data')
     );
 
+    if (formDataFromLs === null) {
+      return;
+    }
+
     formData = formDataFromLs;
 
     for (const key in formDataFromLs) {
@@ -46,6 +50,8 @@ const onFormSubmit = event => {
     alert('Fill all fields, please');
     return;
   }
+
+  console.log(formData);
 
   const { currentTarget: formEl } = event;
 

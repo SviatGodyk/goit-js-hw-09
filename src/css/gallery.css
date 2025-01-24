@@ -10,6 +10,7 @@ body {
 .gallery {
   display: flex;
   flex-wrap: wrap;
+
   max-width: 1128px;
   gap: 24px 24px;
   margin: 0 auto;
