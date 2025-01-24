@@ -1,7 +1,5 @@
 import SimpleLightbox from 'simplelightbox';
 
-new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
-
 const images = [
   {
     preview:
@@ -68,26 +66,6 @@ const images = [
   },
 ];
 
-// const gallery = document.querySelector('.gallery');
-// console.log(gallery);
-
-// const galleryImages = images
-//   .map(
-//     image =>
-//       `<li class="gallery-item">
-//             <a class="gallery-link" href="${image.original}">
-//                 <img
-//                    class="gallery-image"
-//                    src="${image.preview}"
-//                    alt="${image.description}"
-//                 />
-//             </a>
-//        </li>`
-//   )
-//   .join('');
-
-// gallery.innerHTML = galleryImages;
-
 const createImageCardTemplate = image => {
   return `<li class="gallery-item">
   <a class="gallery-link" href="${image.original}">
@@ -103,6 +81,8 @@ const imagesCardsTemplate = images
 const imageListEl = document.querySelector('.gallery');
 
 imageListEl.innerHTML = imagesCardsTemplate;
+
+new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
 
 imageListEl.addEventListener('click', event => {
   event.preventDefault();
